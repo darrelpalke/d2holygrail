@@ -1,0 +1,654 @@
+Misc
+
+Amulets
+Nokozan Relic, Amulet, 1, 1, 1, 2, 0, 0, None
+The Eye of Etlich, Amulet, 1, 1, 1, 2, 0, 0, None
+The Mahim-Oak Curio, Amulet, 1, 1, 1, 2, 0, 0, None
+Saracen's Chance, Amulet, 1, 1, 1, 2, 0, 0, None
+The Cat's Eye, Amulet, 1, 1, 1, 2, 0, 0, None
+The Rising Sun, Amulet, 1, 1, 1, 2, 0, 0, None
+Crescent Moon, Amulet, 1, 1, 1, 2, 0, 0, None
+Atma's Scarab, Amulet, 1, 1, 1, 2, 0, 0, None
+Highlord's Wrath, Amulet, 1, 1, 1, 2, 0, 0, None
+Mara's Kaleidoscope, Amulet, 1, 1, 1, 2, 0, 0, None
+Seraph's Hymn, Amulet, 1, 1, 1, 2, 0, 0, None
+Metalgrid, Amulet, 1, 1, 1, 2, 0, 0, None
+
+Rings
+Nagelring, Ring, 1, 1, 1, 2, 0, 0, None
+Manald Heal, Ring, 1, 1, 1, 2, 0, 0, None
+Stone of Jordan, Ring, 1, 1, 1, 2, 0, 0, None
+Dwarf Star, Ring, 1, 1, 1, 2, 0, 0, None
+Raven Frost, Ring, 1, 1, 1, 2, 0, 0, None
+Bul-Kathos' Wedding Band, Ring, 1, 1, 1, 2, 0, 0, None
+Carrion Wind, Ring, 1, 1, 1, 2, 0, 0, None
+Nature's Peace, Ring, 1, 1, 1, 2, 0, 0, None
+Wisp Projector, Ring, 1, 1, 1, 2, 0, 0, None
+
+Jewels
+Rainbow Facet Blaze, Jewel, 1, 1, 1, 2, 0, 0, None
+Rainbow Facet Frost Nova, Jewel, 1, 1, 1, 2, 0, 0, None
+Rainbow Facet Nova, Jewel, 1, 1, 1, 2, 0, 0, None
+Rainbow Facet Venom, Jewel, 1, 1, 1, 2, 0, 0, None
+Rainbow Facet Meteor, Jewel, 1, 1, 1, 2, 0, 0, None
+Rainbow Facet Blizzard, Jewel, 1, 1, 1, 2, 0, 0, None
+Rainbow Facet Chain Lightning, Jewel, 1, 1, 1, 2, 0, 0, None
+Rainbow Facet Poison Nova, Jewel, 1, 1, 1, 2, 0, 0, None
+
+Charms
+Annihilus, Small Charm, 1, 1, 1, 2, 0, 0, None
+Gheed's Fortune, Grand Charm, 1, 3, 1, 2, 0, 0, None
+Hellfire Torch, Large Charm, 1, 2, 1, 2, 0, 0, None
+
+
+Armors
+
+Armors
+Greyform, Quilted Armor, 2, 3, 1, 1, 0, 0, None
+Blinkbat's Form, Leather Armor, 2, 3, 1, 1, 0, 0, None
+The Centurion, Hard Leather Armor, 2, 3, 1, 1, 0, 0, None
+Twitchthroe, Studded Leather, 2, 3, 1, 1, 0, 0, None
+Darkglow, Ring Mail, 2, 3, 1, 1, 0, 0, None
+Hawkmail, Scale Mail, 2, 3, 1, 1, 0, 0, None
+Venom Ward, Breast Plate, 2, 3, 1, 1, 0, 0, None
+Sparking Mail, Chain Mail, 2, 3, 1, 1, 0, 0, None
+Iceblink, Splint Mail, 2, 3, 1, 1, 0, 0, None
+Heavenly Garb, Light Plate, 2, 3, 1, 1, 0, 0, None
+Rockfleece, Field Plate, 2, 3, 1, 1, 0, 0, None
+Boneflesh, Plate Mail, 2, 3, 1, 1, 0, 0, None
+Rattlecage, Gothic Plate, 2, 3, 1, 1, 0, 0, None
+Goldskin, Full Plate Mail, 2, 3, 1, 1, 0, 0, None
+Silks of the Victor, Ancient Armor, 2, 3, 1, 1, 0, 0, None
+The Spirit Shroud, Ghost Armor, 2, 3, 2, 1, 0, 0, None
+Skin of the Vipermagi, Serpentskin Armor, 2, 3, 2, 1, 0, 0, None
+Skin of the Flayed One, Demonhide Armor, 2, 3, 2, 1, 0, 0, None
+Iron Pelt, Trellised Armor, 2, 3, 2, 1, 0, 0, None
+Crow Caw, Tigulated Mail, 2, 3, 2, 1, 0, 0, None
+Spirit Forge, Linked Mail, 2, 3, 2, 1, 0, 0, None
+Duriel's Shell, Cuirass, 2, 3, 2, 1, 0, 0, None
+Shaftstop, Mesh Armor, 2, 3, 2, 1, 0, 0, None
+Skullder's Ire, Russet Armor, 2, 3, 2, 1, 0, 0, None
+Que-Hegan's Wisdom, Mage Plate, 2, 3, 2, 1, 0, 0, None
+Toothrow, Sharktooth Armor, 2, 3, 2, 1, 0, 0, None
+Guardian Angel, Templar Coat, 2, 3, 2, 1, 0, 0, None
+Atma's Wail, Embossed Plate, 2, 3, 2, 1, 0, 0, None
+Black Hades, Chaos Armor, 2, 3, 2, 1, 0, 0, None
+Corpsemourn, Ornate Plate, 2, 3, 2, 1, 0, 0, None
+Ormus' Robes, Dusk Shroud, 2, 3, 3, 1, 0, 0, None
+The Gladiator's Bane, Wire Fleece, 2, 3, 3, 1, 0, 0, None
+Arkaine's Valor, Balrog Skin, 2, 3, 3, 1, 0, 0, None
+Leviathan, Kraken Shell, 2, 3, 3, 2, 0, 0, None
+Steel Carapace, Shadow Plate, 2, 3, 3, 1, 0, 0, None
+Templar's Might, Sacred Armor, 2, 3, 3, 1, 0, 0, None
+Tyrael's Might, Sacred Armor , 2, 3, 3, 2, 0, 0, None
+
+Gloves
+The Hand of Broc, Leather Gloves, 2, 2, 1, 1, 0, 0, None
+Bloodfist, Heavy Gloves, 2, 2, 1, 1, 0, 0, None
+Chance Guards, Chain Gloves, 2, 2, 1, 1, 0, 0, None
+Magefist, Light Gauntlets, 2, 2, 1, 1, 0, 0, None
+Frostburn, Gauntlets, 2, 2, 1, 1, 0, 0, None
+Venom Grip, Demonhide Gloves, 2, 2, 2, 1, 0, 0, None
+Gravepalm, Sharkskin Gloves, 2, 2, 2, 1, 0, 0, None
+Ghoulhide, Heavy Bracers, 2, 2, 2, 1, 0, 0, None
+Lava Gout, Battle Gauntlets, 2, 2, 2, 1, 0, 0, None
+Hellmouth, War Gauntlets, 2, 2, 2, 1, 0, 0, None
+Dracul's Grasp, Vampirebone Gloves, 2, 2, 3, 1, 0, 0, None
+Soul Drainer, Vambraces, 2, 2, 3, 1, 0, 0, None
+Steelrend, Ogre Gauntlets, 2, 2, 3, 1, 0, 0, None
+
+Helms
+Biggin's Bonnet, Cap, 2, 2, 1, 1, 0, 0, None
+Tarnhelm, Skull Cap, 2, 2, 1, 1, 0, 0, None
+Coif of Glory, Helm, 2, 2, 1, 1, 0, 0, None
+Duskdeep, Full Helm, 2, 2, 1, 1, 0, 0, None
+Howltusk, Great Helm, 2, 2, 1, 1, 0, 0, None
+The Face of Horror, Mask, 2, 2, 1, 1, 0, 0, None
+Undead Crown, Crown, 2, 2, 1, 1, 0, 0, None
+Wormskull, Bone Helm, 2, 2, 1, 1, 0, 0, None
+Peasant Crown, War Hat, 2, 2, 2, 1, 0, 0, None
+Rockstopper, Sallet, 2, 2, 2, 1, 0, 0, None
+Stealskull, Casque, 2, 2, 2, 1, 0, 0, None
+Darksight Helm, Basinet, 2, 2, 2, 1, 0, 0, None
+Valkyrie Wing, Winged Helm, 2, 2, 2, 1, 0, 0, None
+Blackhorn's Face, Death Mask, 2, 2, 2, 1, 0, 0, None
+Crown of Thieves, Grand Crown, 2, 2, 2, 1, 0, 0, None
+Vampire Gaze, Grim Helm, 2, 2, 2, 1, 0, 0, None
+Harlequin Crest, Shako, 2, 2, 3, 1, 0, 0, None
+Steelshade, Armet, 2, 2, 3, 1, 0, 0, None
+Veil of Steel, Spired Helm, 2, 2, 3, 1, 0, 0, None
+Nightwing's Veil, Spired Helm, 2, 2, 3, 1, 0, 0, None
+Andariel's Visage, Demonhead, 2, 2, 3, 1, 0, 0, None
+Crown of Ages, Corona, 2, 2, 3, 2, 0, 0, None
+Giant Skull, Bone Visage, 2, 2, 3, 1, 0, 0, None
+
+Circlets
+Kira's Guardian, Tiara, 2, 2, 1, 1, 0, 0, None
+Griffon's Eye, Diadem, 2, 2, 1, 1, 0, 0, None
+
+Boots
+Hotspur, Boots, 2, 2, 1, 1, 0, 0, None
+Gorefoot, Heavy Boots, 2, 2, 1, 1, 0, 0, None
+Treads of Cthon, Chain Boots, 2, 2, 1, 1, 0, 0, None
+Goblin Toe, Light Plated Boots, 2, 2, 1, 1, 0, 0, None
+Tearhaunch, Greaves, 2, 2, 1, 1, 0, 0, None
+Infernostride, Demonhide Boots, 2, 2, 2, 1, 0, 0, None
+Waterwalk, Sharkskin Boots, 2, 2, 2, 1, 0, 0, None
+Silkweave, Mesh Boots, 2, 2, 2, 1, 0, 0, None
+War Traveler, Battle Boots, 2, 2, 2, 1, 0, 0, None
+Gore Rider, War Boots, 2, 2, 2, 1, 0, 0, None
+Sandstorm Trek, Scarabshell Boots, 2, 2, 3, 1, 0, 0, None
+Marrowwalk, Boneweave Boots, 2, 2, 3, 1, 0, 0, None
+Shadow Dancer, Myrmidon Greaves, 2, 2, 3, 1, 0, 0, None
+
+Belts
+Lenymo, Sash, 2, 1, 1, 1, 0, 0, None
+Snakecord, Light Belt, 2, 1, 1, 1, 0, 0, None
+Nightsmoke, Belt, 2, 1, 1, 1, 0, 0, None
+Goldwrap, Heavy Belt, 2, 1, 1, 1, 0, 0, None
+Bladebuckle, Plated Belt, 2, 1, 1, 1, 0, 0, None
+String of Ears, Demonhide Sash, 2, 1, 2, 1, 0, 0, None
+Razortail, Sharkskin Belt, 2, 1, 2, 1, 0, 0, None
+Gloom's Trap, Mesh Belt, 2, 1, 2, 1, 0, 0, None
+Snowclash, Battle Belt, 2, 1, 2, 1, 0, 0, None
+Thundergod's Vigor, War Belt, 2, 1, 2, 1, 0, 0, None
+Arachnid Mesh, Spiderweb Sash, 2, 1, 3, 1, 0, 0, None
+Nosferatu's Coil, Vampirefang Belt, 2, 1, 3, 1, 0, 0, None
+Verdungo's Hearty Cord, Mithril Coil, 2, 1, 3, 1, 0, 0, None
+
+Shields
+Pelta Lunata, Buckler, 2, 2, 1, 1, 0, 0, None
+Umbral Disk, Small Shield, 2, 2, 1, 1, 0, 0, None
+Stormguild, Large Shield, 2, 3, 1, 1, 0, 0, None
+Steelclash, Kite Shield, 2, 3, 1, 1, 0, 0, None
+Swordback Hold, Spiked Shield, 2, 3, 1, 1, 0, 0, None
+Bverrit Keep, Tower Shield, 2, 3, 1, 1, 0, 0, None
+Wall of the Eyeless, Bone Shield, 2, 3, 1, 1, 0, 0, None
+The Ward, Gothic Shield, 2, 4, 1, 1, 0, 0, None
+Viscerataunt, Defender, 2, 2, 2, 1, 0, 0, None
+Moser's Blessed Circle, Round Shield, 2, 2, 2, 1, 0, 0, None
+Stormchaser, Scutum, 2, 3, 2, 1, 0, 0, None
+Tiamat's Rebuke, Dragon Shield, 2, 3, 2, 1, 0, 0, None
+Lance Guard, Barbed Shield, 2, 3, 2, 1, 0, 0, None
+Gerke's Sanctuary, Pavise, 2, 3, 2, 1, 0, 0, None
+Lidless Wall, Grim Shield, 2, 3, 2, 1, 0, 0, None
+Radament's Sphere, Ancient Shield, 2, 4, 2, 1, 0, 0, None
+Blackoak Shield, Luna, 2, 2, 3, 1, 0, 0, None
+Stormshield, Monarch, 2, 3, 3, 2, 0, 0, None
+Spike Thorn, Blade Barrier, 2, 3, 3, 1, 0, 0, None
+Medusa's Gaze, Aegis, 2, 3, 3, 1, 0, 0, None
+Head Hunter's Glory, Troll Nest, 2, 3, 3, 1, 0, 0, None
+Spirit Ward, Ward, 2, 4, 3, 1, 0, 0, None
+
+Barbarian Helms
+Arreat's Face, Slayer Guard, 2, 2, 2, 1, 0, 0, None
+Wolfhowl, Fury Visor, 2, 2, 3, 1, 0, 0, None
+Demonhorn's Edge, Destroyer Helm, 2, 2, 3, 1, 0, 0, None
+Halaberd's Reign, Conqueror Crown, 2, 2, 3, 1, 0, 0, None
+
+Druid Helms
+Jalal's Mane, Totemic Mask, 2, 2, 2, 1, 0, 0, None
+Cerebus' Bite, Blood Spirit, 2, 2, 3, 1, 0, 0, None
+Ravenlore, Sky Spirit, 2, 2, 3, 1, 0, 0, None
+Spirit Keeper, Earth Spirit, 2, 2, 3, 1, 0, 0, None
+
+Necromancer Shields
+Homunculus, Hierophant Trophy, 2, 2, 2, 1, 0, 0, None
+Darkforce Spawn, Bloodlord Skull, 2, 2, 3, 1, 0, 0, None
+Boneflame, Succubus Skull, 2, 2, 3, 1, 0, 0, None
+
+Paladin Shields
+Herald of Zakarum, Gilded Shield, 2, 4, 2, 1, 0, 0, None
+Alma Negra, Sacred Rondache, 2, 2, 3, 1, 0, 0, None
+Dragonscale, Zakarum Shield, 2, 4, 3, 1, 0, 0, None
+
+
+Weapons
+
+Swords (1h)
+Rixot's Keen, Short Sword, 1, 3, 1, 1, 0, 0, None
+Blood Crescent, Scimitar, 1, 3, 1, 1, 0, 0, None
+Skewer of Krintiz, Sabre, 1, 3, 1, 1, 0, 0, None
+Gleamscythe, Falchion, 1, 3, 1, 1, 0, 0, None
+Griswold's Edge, Broad Sword, 2, 3, 1, 1, 0, 0, None
+Hellplague, Long Sword, 2, 3, 1, 1, 0, 0, None
+Culwen's Point, War Sword, 1, 3, 1, 1, 0, 0, None
+Bloodletter, Gladius, 1, 3, 2, 1, 0, 0, None
+Coldsteel Eye, Cutlass, 1, 3, 2, 1, 0, 0, None
+Hexfire, Shamshir, 1, 3, 2, 1, 0, 0, None
+Blade of Ali Baba, Tulwar, 1, 3, 2, 1, 0, 0, None
+Ginther's Rift, Dimensional Blade, 2, 3, 2, 1, 0, 0, None
+Headstriker, Battle Sword, 2, 3, 2, 1, 0, 0, None
+Plague Bearer, Rune Sword, 2, 3, 2, 1, 0, 0, None
+The Atlantean, Ancient Sword, 1, 3, 2, 1, 0, 0, None
+Djinn Slayer, Aqtaghan, 1, 3, 3, 1, 0, 0, None
+Bloodmoon, Elegant Blade, 1, 3, 3, 1, 0, 0, None
+Lightsabre, Phase Blade, 2, 3, 3, 2, 0, 0, None
+Azurewrath, Phase Blade, 2, 3, 3, 2, 0, 0, None
+Frostwind, Cryptic Sword, 2, 3, 3, 1, 0, 0, None
+
+Swords (2h)
+Shadowfang, Two-Handed Sword, 1, 4, 1, 1, 0, 0, None
+Soulflay, Claymore, 1, 4, 1, 1, 0, 0, None
+Kinemil's Awl, Giant Sword, 1, 4, 1, 1, 0, 0, None
+Blacktongue, Bastard Sword, 1, 4, 1, 1, 0, 0, None
+Ripsaw, Flamberge, 2, 4, 1, 1, 0, 0, None
+The Patriarch, Great Sword, 2, 4, 1, 1, 0, 0, None
+Crainte Vomir, Espandon, 1, 4, 2, 1, 0, 0, None
+Bing Sz Wang, Dacian Falx, 1, 4, 2, 1, 0, 0, None
+The Vile Husk, Tusk Sword, 1, 4, 2, 1, 0, 0, None
+Cloudcrack, Gothic Sword, 1, 4, 2, 1, 0, 0, None
+Todesfaelle Flamme, Zweihander, 2, 4, 2, 1, 0, 0, None
+Swordguard, Swordguard, 2, 4, 2, 1, 0, 0, None
+Flamebellow, Balrog Blade, 1, 4, 3, 1, 0, 0, None
+Doombringer, Champion Sword, 1, 4, 3, 2, 0, 0, None
+The Grandfather, Colossus Blade, 2, 4, 3, 2, 0, 0, None
+
+Daggers
+Gull, Dagger, 1, 2, 1, 1, 0, 0, None
+The Diggler, Dirk, 1, 2, 1, 1, 0, 0, None
+The Jade Tan Do, Kris, 1, 3, 1, 1, 0, 0, None
+Spectral Shard, Blade, 1, 3, 1, 1, 0, 0, None
+Spineripper, Poignard, 1, 2, 2, 1, 0, 0, None
+Heart Carver, Rondel, 1, 2, 2, 1, 0, 0, None
+Blackbog's Sharp, Cinquedeas, 1, 3, 2, 1, 0, 0, None
+Stormspike, Stiletto, 1, 3, 2, 1, 0, 0, None
+Wizardspike, Bone Knife, 1, 2, 3, 2, 0, 0, None
+Fleshripper, Fanged Knife, 1, 3, 3, 1, 0, 0, None
+Ghostflame, Legend Spike, 1, 3, 3, 3, 0, 0, None
+
+Axes (1h)
+The Gnasher, Hand Axe, 1, 3, 1, 1, 0, 0, None
+Deathspade, Axe, 2, 3, 1, 1, 0, 0, None
+Bladebone, Double Axe, 2, 3, 1, 1, 0, 0, None
+Skull Splitter, Military Pick, 2, 3, 1, 1, 0, 0, None
+Rakescar, War Axe, 2, 3, 1, 1, 0, 0, None
+Coldkill, Hatchet, 1, 3, 2, 1, 0, 0, None
+Butcher's Pupil, Cleaver, 2, 3, 2, 2, 0, 0, None
+Islestrike, Twin Axe, 2, 3, 2, 1, 0, 0, None
+Pompeii's Wrath, Crowbill, 2, 3, 2, 1, 0, 0, None
+Guardian Naga, Naga, 2, 3, 2, 1, 0, 0, None
+Razor's Edge, Tomahawk, 1, 3, 3, 1, 0, 0, None
+Rune Master, Ettin Axe, 2, 3, 3, 1, 0, 0, None
+Cranebeak, War Spike, 2, 3, 3, 1, 0, 0, None
+Death Cleaver, Berserker Axe, 2, 3, 3, 1, 0, 0, None
+
+Axes (2h)
+Axe of Fechmar, Large Axe, 2, 3, 1, 1, 0, 0, None
+Goreshovel, Broad Axe, 2, 3, 1, 1, 0, 0, None
+The Chieftain, Battle Axe, 2, 3, 1, 1, 0, 0, None
+Brainhew, Great Axe, 2, 4, 1, 1, 0, 0, None
+Humongous, Giant Axe, 2, 3, 1, 1, 0, 0, None
+Warlord's Trust, Military Axe, 2, 3, 2, 1, 0, 0, None
+Spellsteel, Bearded Axe, 2, 3, 2, 1, 0, 0, None
+Stormrider, Tabar, 2, 3, 2, 1, 0, 0, None
+Boneslayer Blade, Gothic Axe, 2, 4, 2, 1, 0, 0, None
+The Minotaur, Ancient Axe, 2, 3, 2, 1, 0, 0, None
+Ethereal Edge, Silver-Edged Axe, 2, 3, 3, 3, 0, 0, None
+Hellslayer, Decapitator, 2, 3, 3, 1, 0, 0, None
+Messerschmidt's Reaver, Champion Axe, 2, 4, 3, 1, 0, 0, None
+Executioner's Justice, Glorious Axe, 2, 3, 3, 1, 0, 0, None
+
+Maces (1h)
+Felloak, Club, 1, 3, 1, 1, 0, 0, None
+Stoutnail, Spiked Club, 1, 3, 1, 1, 0, 0, None
+Crushflange, Mace, 1, 3, 1, 1, 0, 0, None
+Bloodrise, Morning Start, 1, 3, 1, 1, 0, 0, None
+The General's Tan Do Li Ga, Flail, 2, 3, 1, 1, 0, 0, None
+Ironstone, War Hammer, 2, 3, 1, 1, 0, 0, None
+Dark Clan Crusher, Cudgel, 1, 3, 2, 1, 0, 0, None
+Fleshrender, Barbed Club, 1, 3, 2, 1, 0, 0, None
+Sureshrill Frost, Flanged Mace, 1, 3, 2, 1, 0, 0, None
+Moonfall, Jagged Star, 1, 3, 2, 1, 0, 0, None
+Baezil's Vortex, Knout, 2, 3, 2, 1, 0, 0, None
+Earthshaker, Battle Hammer, 2, 3, 2, 1, 0, 0, None
+Nord's Tenderizer, Truncheon, 1, 3, 3, 1, 0, 0, None
+Demon Limb, Tyrant Club, 1, 3, 3, 1, 0, 0, None
+Baranar's Star, Devil Star, 1, 3, 3, 1, 0, 0, None
+Horizon's Tornado, Scourge, 2, 3, 3, 1, 0, 0, None
+Stormlash, Scourge, 2, 3, 3, 1, 0, 0, None
+Stone Crusher, Legendary Mallet, 2, 3, 3, 1, 0, 0, None
+Schaefer's Hammer, Legendary Mallet, 2, 3, 3, 2, 0, 0, None
+
+Maces (2h)
+Bonesnap, Maul, 2, 4, 1, 1, 0, 0, None
+Steeldriver, Great Maul, 2, 3, 1, 1, 0, 0, None
+Bloodtree Stump, War Club, 2, 4, 2, 1, 0, 0, None
+The Gavel of Pain, Martel de Fer, 2, 3, 2, 2, 0, 0, None
+Windhammer, Ogre Maul, 2, 4, 3, 1, 0, 0, None
+Earth Shifter, Thunder Maul, 2, 3, 3, 1, 0, 0, None
+The Cranium Basher, Thunder Maul, 2, 3, 3, 2, 0, 0, None
+
+Scepters
+Knell Striker, Scepter, 1, 3, 1, 1, 0, 0, None
+Rusthandle, Grand Scepter, 1, 3, 1, 1, 0, 0, None
+Stormeye, War Scepter, 2, 3, 1, 1, 0, 0, None
+Zakarum's Hand, Rune Scepter, 1, 3, 2, 1, 0, 0, None
+The Fetid Sprinkler, Holy Water Sprinkler, 1, 3, 2, 1, 0, 0, None
+Hand of Blessed Light, Divine Scepter, 2, 3, 2, 1, 0, 0, None
+Heaven's Light, Mighty Scepter, 1, 3, 3, 1, 0, 0, None
+The Redeemer, Mighty Scepter, 1, 3, 3, 1, 0, 0, None
+Astreon's Iron Ward, Caduceus, 2, 3, 3, 1, 0, 0, None
+
+Bows
+Pluckeye, Short Bow, 2, 3, 1, 2, 0, 0, None
+Witherstring, Hunter's Bow, 2, 3, 1, 2, 0, 0, None
+Raven Claw, Long Bow, 2, 4, 1, 2, 0, 0, None
+Rogue's Bow, Composite Bow, 2, 3, 1, 2, 0, 0, None
+Stormstrike, Short Battle Bow, 2, 3, 1, 2, 0, 0, None
+Wizendraw, Long Battle Bow, 2, 4, 1, 2, 0, 0, None
+Hellclap, Short War Bow, 2, 3, 1, 2, 0, 0, None
+Blastbark, Long War Bow, 2, 4, 1, 2, 0, 0, None
+Skystrike, Edge Bow, 2, 3, 2, 2, 0, 0, None
+Riphook, Razor Bow, 2, 3, 2, 2, 0, 0, None
+Kuko Shakaku, Cedar Bow, 2, 4, 2, 2, 0, 0, None
+Endlesshail, Double Bow, 2, 3, 2, 2, 0, 0, None
+Witchwild String, Short Siege Bow, 2, 3, 2, 2, 0, 0, None
+Cliffkiller, Large Siege Bow, 2, 4, 2, 2, 0, 0, None
+Magewrath, Rune Bow, 2, 3, 2, 2, 0, 0, None
+Goldstrike Arch, Gothic Bow, 2, 4, 2, 2, 0, 0, None
+Eaglehorn, Crusader Bow, 2, 4, 3, 2, 0, 0, None
+Widowmaker, Ward Bow, 2, 3, 3, 2, 0, 0, None
+Windforce, Hydra Bow, 2, 4, 3, 2, 0, 0, None
+
+Crossbows
+Leadcrow, Light Crossbow, 2, 3, 1, 2, 0, 0, None
+Ichorsting, Crossbow, 2, 3, 1, 2, 0, 0, None
+Hellcast, Heavy Crossbow, 2, 4, 1, 2, 0, 0, None
+Doomslinger, Repeating Crossbow, 2, 3, 1, 2, 0, 0, None
+Langer Briser, Arbalest, 2, 3, 2, 2, 0, 0, None
+Pus Spitter, Siege Crossbow, 2, 3, 2, 2, 0, 0, None
+Buriza-Do Kyanon, Ballista, 2, 4, 2, 2, 0, 0, None
+Demon Machine, Chu-Ko-Nu, 2, 3, 2, 2, 0, 0, None
+Hellrack, Colossus Crossbow, 2, 4, 3, 2, 0, 0, None
+Gut Siphon, Demon Crossbow, 2, 3, 3, 2, 0, 0, None
+
+Polearms
+Dimoak's Hew, Bardiche, 2, 4, 1, 1, 0, 0, None
+Steelgoad, Voulge, 2, 4, 1, 1, 0, 0, None
+Soul Harvest, Scythe, 2, 4, 1, 1, 0, 0, None
+The Battlebranch, Poleaxe, 2, 4, 1, 1, 0, 0, None
+Woestave, Halberd, 2, 4, 1, 1, 0, 0, None
+The Grim Reaper, War Scythe, 2, 4, 1, 1, 0, 0, None
+The Meat Scraper, Lochaber Axe, 2, 4, 2, 1, 0, 0, None
+Blackleach Blade, Bill, 2, 4, 2, 1, 0, 0, None
+Athena's Wrath, Battle Scythe, 2, 4, 2, 1, 0, 0, None
+Pierre Tombale Couant, Partizan, 2, 4, 2, 1, 0, 0, None
+Husoldal Evo, Bec-De-Corbin, 2, 4, 2, 1, 0, 0, None
+Grim's Burning Dead, Grim Scythe, 2, 4, 2, 1, 0, 0, None
+Bonehew, Ogre Axe, 2, 4, 3, 1, 0, 0, None
+The Reaper's Toll, Thresher, 2, 4, 3, 1, 0, 0, None
+Tomb Reaver, Cryptic Axe, 2, 4, 3, 1, 0, 0, None
+Stormspire, Giant Thresher, 2, 4, 3, 2, 0, 0, None
+
+Spears
+The Dragon Chang, Spear, 2, 4, 1, 1, 0, 0, None
+Razortine, Trident, 2, 4, 1, 1, 0, 0, None
+Bloodthief, Brandistock, 2, 4, 1, 1, 0, 0, None
+Lance of Yaggai, Spetum, 2, 4, 1, 1, 0, 0, None
+The Tannr Gorerod, Pike, 2, 4, 1, 1, 0, 0, None
+The Impaler, War Spear, 2, 4, 2, 1, 0, 0, None
+Kelpie Snare, Fuscina, 2, 4, 2, 1, 0, 0, None
+Soulfeast Tine, War Fork, 2, 4, 2, 1, 0, 0, None
+Hone Sundan, Yari, 2, 4, 2, 1, 0, 0, None
+Spire of Honor, Lance, 2, 4, 2, 1, 0, 0, None
+Arioc's Needle, Hyperion Spear, 2, 4, 3, 1, 0, 0, None
+Viperfork, Mancatcher, 2, 4, 3, 1, 0, 0, None
+Steel Pillar,  War Pike, 2, 4, 3, 2, 0, 0, None
+
+Javelins
+Demon's Arch, Balrog Spear, 1, 3, 3, 1, 0, 0, None
+Wraith Flight, Ghost Glaive, 1, 4, 3, 2, 0, 0, None
+Gargoyle's Bite, Winged Harpoon, 1, 3, 3, 1, 0, 0, None
+
+Throwing Weapons
+Deathbit, Battle Dart, 1, 2, 2, 1, 0, 0, None
+The Scalper, Francisca, 1, 2, 2, 1, 0, 0, None
+Warshrike, Winged Knife, 1, 2, 3, 1, 0, 0, None
+Gimmershred, Flying Axe, 1, 2, 3, 1, 0, 0, None
+Lacerator, Winged Axe, 2, 3, 3, 1, 0, 0, None
+
+Staves
+Bane Ash, Short Staff, 1, 3, 1, 1, 0, 0, None
+Serpent Lord, Long Staff, 1, 4, 1, 1, 0, 0, None
+Spire of Lazarus, Gnarled Staff, 1, 4, 1, 1, 0, 0, None
+The Salamander, Battle Staff, 1, 4, 1, 1, 0, 0, None
+The Iron Jang Bong, War Staff, 2, 4, 1, 1, 0, 0, None
+Razorswitch, Jo Staff, 1, 3, 2, 1, 0, 0, None
+Ribcracker, Quarterstaff, 1, 4, 2, 1, 0, 0, None
+Chromatic Ire, Cedar Staff, 1, 4, 2, 1, 0, 0, None
+Warpspear, Gothic Staff, 1, 4, 2, 1, 0, 0, None
+Skull Collector, Rune Staff, 2, 4, 2, 1, 0, 0, None
+Ondal's Wisdom, Elder Staff, 1, 4, 3, 1, 0, 0, None
+Mang Song's Lesson, Archon Staff, 2, 4, 3, 1, 0, 0, None
+
+Wands
+Torch of Iro, Wand, 1, 2, 1, 1, 0, 0, None
+Maelstrom, Yew Wand, 1, 2, 1, 1, 0, 0, None
+Gravenspine, Bone Wand, 1, 2, 1, 1, 0, 0, None
+Ume's Lament, Grim Wand, 1, 2, 1, 1, 0, 0, None
+Suicide Branch, Burnt Wand, 1, 2, 2, 1, 0, 0, None
+Carin Shard, Petrified Wand, 1, 2, 2, 1, 0, 0, None
+Arm of King Leoric, Tomb Wand, 1, 2, 2, 1, 0, 0, None
+Blackhand Key, Grave Wand, 1, 2, 2, 1, 0, 0, None
+Boneshade, Lich Wand, 1, 2, 3, 1, 0, 0, None
+Death's Web, Unearthed Wand, 1, 2, 3, 1, 0, 0, None
+
+Amazon Bows
+Lycander's Aim, Ceremonial Bow, 2, 4, 2, 2, 0, 0, None
+Bloodraven's Charge, Matriarchal Bow, 2, 4, 3, 2, 0, 0, None
+
+Amazon Spears
+Lycander's Flank, Ceremonial Pike, 2, 4, 2, 1, 0, 0, None
+Stoneraven, Matriarchal Spear, 2, 4, 3, 1, 0, 0, None
+
+Amazon Javelins
+Titan's Revenge, Ceremonial Javelin, 1, 3, 2, 1, 0, 0, None
+Thunderstroke, Thunderstroke, 1, 3, 3, 1, 0, 0, None
+
+Sorceress Orbs
+The Oculus, Swirling Crystal, 1, 3, 2, 1, 0, 0, None
+Eschuta's Temper, Eldritch Orb, 1, 2, 3, 1, 0, 0, None
+Death's Fathom, Dimensional Shard, 1, 3, 3, 1, 0, 0, None
+
+Assassin Claws
+Bartuc's Cut-Throat, Greater Talons, 1, 3, 2, 1, 0, 0, None
+Jade Talon, Wrist Sword, 1, 3, 3, 1, 0, 0, None
+Shadow Killer, Battle Cestus, 1, 3, 3, 3, 0, 0, None
+Firelizard's Talons, Feral Claws, 1, 3, 3, 1, 0, 0, None
+
+
+Sets
+
+Angelic Rainment
+Angelic Wings, Amulet, 1, 1, 1, 2, 0, 0, None
+Angelic Halo, Ring, 1, 1, 1, 2, 0, 0, None
+Angelic Mantle, Ring Mail, 2, 3, 1, 2, 0, 0, None
+Angelic Sickle, Sabre, 1, 3, 1, 2, 0, 0, None
+
+Arcanna's Tricks
+Arcanna's Sign, Amulet, 1, 1, 1, 2, 0, 0, None
+Arcanna's Head, Skull Cap, 2, 2, 1, 2, 0, 0, None
+Arcanna's Flesh, Light Plate, 2, 3, 1, 2, 0, 0, None
+Arcanna's Deathwand, War Staff, 2, 4, 1, 2, 0, 0, None
+
+Arctic Gear
+Arctic Mitts, Light Gauntlets, 2, 2, 1, 2, 0, 0, None
+Arctic Binding, Light Belt, 2, 1, 1, 2, 0, 0, None
+Arctic Furs, Quilted Armor, 2, 3, 1, 2, 0, 0, None
+Arctic Horn, Short War Bow, 2, 3, 1, 2, 0, 0, None
+
+Berserker's Arsenal
+Berserker's Hatchet, Double Axe, 2, 3, 1, 2, 0, 0, None
+Berserker's Hauberk, Splint Mail, 2, 3, 1, 2, 0, 0, None
+Berserker's Headgear, Helm, 2, 2, 1, 2, 0, 0, None
+
+Cathan's Traps
+Cathan's Seal, Ring, 1, 1, 1, 2, 0, 0, None
+Cathan's Sigil, Amulet, 1, 1, 1, 2, 0, 0, None
+Cathan's Visage, Mask, 2, 2, 1, 2, 0, 0, None
+Cathan's Mesh, Chain Mail, 2, 3, 1, 2, 0, 0, None
+Cathan's Rule, Battle Staff, 1, 4, 1, 2, 0, 0, None
+
+Civerb's Vestments
+Civerb's Cudgel, Grand Scepter, 1, 3, 1, 2, 0, 0, None
+Civerb's Ward, Large Shield, 2, 3, 1, 2, 0, 0, None
+Civerb's Icon, Amulet, 1, 1, 1, 2, 0, 0, None
+
+Cleglaw's Brace
+Cleglaw's Tooth, Long Sword, 2, 3, 1, 2, 0, 0, None
+Cleglaw's Claw, Large Shield, 2, 3, 1, 2, 0, 0, None
+Cleglaw's Pincers, Chain Gloves, 2, 2, 1, 2, 0, 0, None
+
+Death's Disguise
+Death's Touch, War Sword, 1, 3, 1, 2, 0, 0, None
+Death's Guard, Sash, 2, 1, 1, 2, 0, 0, None
+Death's Hand, Leather Gloves, 2, 2, 1, 2, 0, 0, None
+
+Hsarus' Defense
+Hsarus' Iron Stay, Belt, 2, 1, 1, 2, 0, 0, None
+Hsarus' Iron Fist, Buckler, 2, 2, 1, 2, 0, 0, None
+Hsarus' Iron Heel, Chain Boots, 2, 2, 1, 2, 0, 0, None
+
+Infernal Tools
+Infernal Sign, Heavy Belt, 2, 1, 1, 2, 0, 0, None
+Infernal Torch, Grim Wand, 1, 2, 1, 2, 0, 0, None
+Infernal Cranium, Cap, 2, 2, 1, 2, 0, 0, None
+
+Iratha's Finery
+Iratha's Coil, Crown, 2, 2, 1, 2, 0, 0, None
+Iratha's Cuff, Light Gauntlets, 2, 2, 1, 2, 0, 0, None
+Iratha's Cord, Heavy Belt, 2, 1, 1, 2, 0, 0, None
+Iratha's Collar, Amulet, 1, 1, 1, 2, 0, 0, None
+
+Isenhart's Armory
+Isenhart's Lightbrand, Broad Sword, 2, 3, 1, 2, 0, 0, None
+Isenhart's Case, Breast Plate, 2, 3, 1, 2, 0, 0, None
+Isenhart's Horns, Full Helm, 2, 2, 1, 2, 0, 0, None
+Isenhart's Parry, Gothic Shield, 2, 4, 1, 2, 0, 0, None
+
+Milabrega's Regalia
+Milabrega's Rod, War Scepter, 2, 3, 1, 2, 0, 0, None
+Milabrega's Robe, Ancient Armor, 2, 3, 1, 2, 0, 0, None
+Milabrega's Diadem, Crown, 2, 2, 1, 2, 0, 0, None
+Milabrega's Orb, Kite Shield, 2, 3, 1, 2, 0, 0, None
+
+Sigon's Complete Steel
+Sigon's Shelter, Gothic Plate, 2, 3, 1, 2, 0, 0, None
+Sigon's Visor, Great Helm, 2, 3, 1, 2, 0, 0, None
+Sigon's Guard, Tower Shield, 2, 3, 1, 2, 0, 0, None
+Sigon's Gage, Gauntlets, 2, 2, 1, 2, 0, 0, None
+Sigon's Sabot, Greaves, 2, 2, 1, 2, 0, 0, None
+Sigon's Wrap, Plated Belt, 2, 1, 1, 2, 0, 0, None
+
+Tancred's Battlegear
+Tancred's Skull, Bone Helm, 2, 2, 1, 2, 0, 0, None
+Tancred's Weird, Amulet, 1, 1, 1, 2, 0, 0, None
+Tancred's Hobnails, Boots, 2, 2, 1, 2, 0, 0, None
+Tancred's Spine, Full Plate Mail, 2, 3, 1, 2, 0, 0, None
+Tancred's Crowbill, Military Pick, 2, 3, 1, 2, 0, 0, None
+
+Vidala's Rig
+Vidala's Snare, Amulet, 1, 1, 1, 2, 0, 0, None
+Vidala's Ambush, Leather Armor, 2, 3, 1, 2, 0, 0, None
+Vidala's Fetlock, Light Plated Boots, 2, 2, 1, 2, 0, 0, None
+Vidala's Barb, Long Battle Bow, 2, 4, 1, 2, 0, 0, None
+
+ALdur's Watchtower
+Aldur's Rhythm, Jagged Star, 1, 3, 2, 2, 0, 0, None
+Aldur's Stony Gaze, Hunter's Guise, 2, 2, 2, 2, 0, 0, None
+Aldur's Deception, Shadow Plate, 2, 3, 2, 2, 0, 0, None
+Aldur's Advance, Battle Boots, 2, 2, 2, 2, 0, 0, None
+
+Bul-Kathos' Children
+Bul-Kathos' Sacred Charge, Colossus Blade, 2, 4, 3, 2, 0, 0, None
+Bul-Kathos' Tribal Guardian, Mythical Sword, 1, 3, 3, 2, 0, 0, None
+
+Cow King's Leathers
+Cow King's Horns, War Hat, 2, 2, 2, 2, 0, 0, None
+Cow King's Hide, Studded Leather, 2, 3, 1, 2, 0, 0, None
+Cow King's Hooves, Heavy Boots, 2, 2, 1, 2, 0, 0, None
+
+Gridwold's Legacy
+Griswold's Redemption, Caduceus, 2, 3, 3, 2, 0, 0, None
+Griswold's Valor, Corona, 2, 2, 3, 2, 0, 0, None
+Griswold's Heart, Ornate Plate, 2, 3, 2, 2, 0, 0, None
+Griswold's Honor, Vortex Shield, 2, 2, 3, 2, 0, 0, None
+
+Heaven's Brethren
+Dangoon's Teaching, Reinforced Mace, 1, 3, 3, 2, 0, 0, None
+Haemosu's Adament, Cuirass, 2, 3, 2, 2, 0, 0, None
+Taebaek's Glory, Ward, 2, 4, 3, 2, 0, 0, None
+Ondal's Almighty, Spired Helm, 2, 2, 3, 2, 0, 0, None
+
+Hwanin's Majesty
+Hwanin's Justice, Bill, 2, 4, 2, 2, 0, 0, None
+Hwanin's Refuge, Tigulated Mail, 2, 3, 2, 2, 0, 0, None
+Hwanin's Splendor, Grand Crown, 2, 2, 2, 2, 0, 0, None
+Hwanin's Blessing, Belt, 2, 1, 1, 2, 0, 0, None
+
+Immortal King
+Immortal King's Stone Crusher, Ogre Maul, 2, 4, 3, 2, 0, 0, None
+Immortal King's Will, Avenger Guard, 2, 2, 2, 2, 0, 0, None
+Immortal King's Soul Cage, Sacred Armor, 2, 3, 3, 2, 0, 0, None
+Immortal King's Detail, War Belt, 2, 1, 2, 2, 0, 0, None
+Immortal King's Forge, War Gauntlets, 2, 2, 2, 2, 0, 0, None
+Immortal King's Pillar, War Boots, 2, 2, 2, 2, 0, 0, None
+
+M'avina's Battle Hymn
+M'avina's Caster, Grand Matron Bow, 2, 4, 3, 2, 0, 0, None
+M'avina's Embrace, Kraken Shell, 2, 3, 3, 2, 0, 0, None
+M'avina's True Sight, Diadem, 2, 2, 1, 2, 0, 0, None
+M'avina's Tenet, Sharkskin Belt, 2, 1, 2, 2, 0, 0, None
+M'avina's Icy Clutch, Battle Gauntlets, 2, 2, 2, 2, 0, 0, None
+
+Naj's Ancient Vestige
+Naj's Circlet, Circlet, 2, 2, 1, 2, 0, 0, None
+Naj's Light Plate, Hellforge Plate, 2, 3, 3, 2, 0, 0, None
+Naj's Puzzler, Elder Staff, 1, 4, 3, 2, 0, 0, None
+
+Natalya's Odium
+Natalya's Mark, Scissors Suwayyah, 1, 3, 3, 2, 0, 0, None
+Natalya's Shadow, Loricated Mail, 2, 3, 3, 2, 0, 0, None
+Natalya's Totem, Grim Helm, 2, 2, 2, 2, 0, 0, None
+Natalya's Soul, Mesh Boots, 2, 2, 2, 2, 0, 0, None
+
+Orphan's Call
+Whitstan's Guard, Round Shield, 2, 2, 2, 2, 0, 0, None
+Guillaume's Face, Winged Helm, 2, 2, 2, 2, 0, 0, None
+Wilhelm's Pride, Battle Belt, 2, 1, 2, 2, 0, 0, None
+Magnus' Skin, Sharkskin Gloves, 2, 2, 2, 2, 0, 0, None
+
+Sander's Folly
+Sander's Superstition, Bone Wand, 1, 2, 1, 2, 0, 0, None
+Sander's Paragon, Cap, 2, 2, 1, 2, 0, 0, None
+Sander's Taboo, Heavy Gloves, 2, 2, 1, 2, 0, 0, None
+Sander's Riprap, Heavy Boots, 2, 2, 1, 2, 0, 0, None
+
+Sazabi's Grand Tribute
+Sazabi's Cobalt Redeemer, Cryptic Sword, 2, 3, 3, 2, 0, 0, None
+Sazabi's Ghost Liberator, Balrog Skin, 2, 3, 3, 2, 0, 0, None
+Sazabi's Mental Sheath, Basinet, 2, 2, 2, 2, 0, 0, None
+
+Tal Rasha's Wrappings
+Tal Rasha's Adjudication, Amulet, 1, 1, 1, 2, 0, 0, None
+Tal Rasha's Lidless Eye, Swirling Crystal, 1, 3, 2, 2, 0, 0, None
+Tal Rasha's Guardianship, Lacquered Plate, 2, 3, 3, 2, 0, 0, None
+Tal Rasha's Horadric Crest, Death Mask, 2, 2, 2, 2, 0, 0, None
+Tal Rasha's Fine-Spun Cloth, Mesh Belt, 2, 1, 2, 2, 0, 0, None
+
+The Disciple
+Dark Adherent, Dusk Shroud, 2, 3, 3, 2, 0, 0, None
+Credendum, Mithril Coil, 2, 1, 3, 2, 0, 0, None
+Laying of Hands, Bramble Mitts, 2, 2, 3, 2, 0, 0, None
+Rite of Passage, Demonhide Boots, 2, 2, 2, 2, 0, 0, None
+Telling of Beads, Amulet, 1, 1, 1, 2, 0, 0, None
+
+Trang-Oul's Avatar
+Trang-Oul's Guise, Bone Visage, 2, 2, 3, 2, 0, 0, None
+Trang-Oul's Scales, Chaos Armor, 2, 3, 2, 2, 0, 0, None
+Trang-Oul's Girth, Troll Belt, 2, 1, 3, 2, 0, 0, None
+Trang-Oul's Claws, Heavy Bracers, 2, 2, 2, 2, 0, 0, None
+Trang-Oul's Wing, Cantor Trophy, 2, 2, 3, 2, 0, 0, None
+
+
