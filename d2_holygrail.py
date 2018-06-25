@@ -223,8 +223,6 @@ def writefile():
     global item_groups
     global fname
     
-    print 'writing file' + fname
-    
     f = open(fname, 'w')
     
     for (name, subgroups) in item_groups:
