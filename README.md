@@ -21,20 +21,23 @@ There are a number of query functions:
 - Listing all the groups of items (Misc, Weapons, Armors, Sets), lg
 - Listing all the subgroups within each group, lsg <groupname>
 - Listing all the items within a subgroups, l <subgroupname>
-- Listing all items that have been found (regular and ethereal versions), lfa or lfae
-- Listing all items that have been found within a subgroup (regular and ethereal versions), lf <subgroupname> or lfe <subgroupname>
+- Listing all items that have been found, lfa
+- Listing all items that have been found within a subgroup, lf <subgroupname>
 - Print the long-form data for a particular item, p <itemname>
 
 There are a number of ways to interact with the database.
-- Mark items as found or unfound (regular and ethereal versions), mf <itemname> or mfe <itemname>
+- Mark items as found (regular and ethereal versions), mf <itemname> or mfe <itemname>
+- Unmark items as found (regular and ethereal versions), uf <itemname> or ufe <itemname>
 - Update the comment field for an item, c <itemname>
 
 To clear the database, simply delete d2_items.txt
 
 Overall, there are a few quirks.  
-- When entering the names of a group or object, it must be in a single string of characters.  Omit spaces, apostrophes, dashes.  This is to allow me to be able to have additional parameters past that point (such as a comment to add or a keyword to trigger an unfound).
 - It uses regular expressions so you only have to type a uniquely identifying string.
-- The mf and mfe commands mark things as found.  Add the string 'unfound' as a third argument to unmark the item.
-- The lfa, lfae commands by default will list unfound objects, despite being shorted to ListFindAll.  To print found objects, add a third argument 'found' to print found items.  This is also true for the subgroup list find versions.
-- When counting items, I could Always Ethereal items in the non-eth count.  This is so the non-eth count can reflect finding all items.
+- The lfa command will list unfound objects, despite being shorted to listfindall. This is also true for the subgroup list find versions.
+
+Things to potentially fix (but i dont want to re-sort all the items i've found):
+- If you don't care about non-eth/eth versions, this could be compacted a bit.
+- Having breaks between normal/exceptional/elite may be nicer
+- Fixing the packing in a clean way (no need to use 4 for the height if a whole row of shields only comprises of 2 or 2 height, such as first row of buckler/small shield)
 

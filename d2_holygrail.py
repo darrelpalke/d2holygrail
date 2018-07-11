@@ -384,7 +384,7 @@ def process(cmdStr):
         elif cmd == 'lsg' or cmd == 'listsubgroups':
         
             if len(tokens) >= 2:
-                grp = tokens[1]
+                grp = ''.join(tokens[1:])
                 grp = clean(grp)
                 
                 found = False
@@ -404,7 +404,7 @@ def process(cmdStr):
         elif cmd == 'l' or cmd == 'list':
         
             if len(tokens) >= 2:
-                grp = tokens[1]
+                grp = ''.join(tokens[1:])
                 grp = clean(grp)
                 
                 found = False
@@ -426,11 +426,6 @@ def process(cmdStr):
                 print '  Not enough arguments, missing subgroup name...'
 
         elif cmd == 'lfa' or cmd == 'listfoundall':
-
-            unfound = True
-            if len(tokens) >= 2:
-                found = tokens[1].lower()
-                unfound = found != 'found'
             
             for (_, group) in item_groups:
                 for (gname, subgroup) in group:
@@ -451,7 +446,7 @@ def process(cmdStr):
         
             if len(tokens) >= 2:
             
-                grp = tokens[1]
+                grp = ''.join(tokens[1:])
                 grp = clean(grp)
                 
                 hit = False
@@ -481,7 +476,7 @@ def process(cmdStr):
         elif cmd == 'p' or cmd == 'print':
         
             if len(tokens) >= 2:
-                name = tokens[1]                
+                name = ''.join(tokens[1:])           
                 res = searchItems(name)
                 
                 if len(res) == 1:
@@ -497,7 +492,7 @@ def process(cmdStr):
         elif cmd == 'mf' or cmd == 'markfind':
         
             if len(tokens) >= 2:
-                name = tokens[1]                
+                name = ''.join(tokens[1:])             
                 res = searchItems(name)
                 
                 if len(res) == 1:
@@ -536,7 +531,7 @@ def process(cmdStr):
         elif cmd == 'mfe' or cmd == 'markfindeth':
         
             if len(tokens) >= 2:
-                name = tokens[1]                
+                name = ''.join(tokens[1:])              
                 res = searchItems(name)
                 
                 if len(res) == 1:
@@ -575,7 +570,7 @@ def process(cmdStr):
         elif cmd == 'uf' or cmd == 'unmarkfind':
         
             if len(tokens) >= 2:
-                name = tokens[1]                
+                name = ''.join(tokens[1:])            
                 res = searchItems(name)
                 
                 if len(res) == 1:
@@ -614,7 +609,7 @@ def process(cmdStr):
         elif cmd == 'ufe' or cmd == 'unmarkfindeth':
         
             if len(tokens) >= 2:
-                name = tokens[1]                
+                name = ''.join(tokens[1:])          
                 res = searchItems(name)
                 
                 if len(res) == 1:
@@ -653,7 +648,7 @@ def process(cmdStr):
         elif cmd == 'c' or cmd == 'comment':
         
             if len(tokens) >= 2:
-                name = tokens[1]                
+                name = ''.join(tokens[1:])           
                 res = searchItems(name)
                 
                 if len(res) == 1:
