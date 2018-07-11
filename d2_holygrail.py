@@ -13,10 +13,7 @@ fname_start = 'd2_items_start.txt'
 startPage = 40
 
 itemCt = 0
-itemCtEth = 0
-
 itemsLeft = 0
-itemsLeftEth = 0
 
 NAME = 0
 TYPE = 1
@@ -46,9 +43,7 @@ ETH_ETH_ONLY = 3
 def calculateoffsets():
     global item_groups
     global itemCt
-    global itemCtEth
     global itemsLeft
-    global itemsLeftEth
     global startPage
     
     currentPage = startPage
@@ -63,14 +58,11 @@ def calculateoffsets():
             for item in subgroup:
                 eth = item[ETH]
                 
-                if eth == 1:
+                if eth == ETH_BOTH:
                     itemCt += 1
-                    itemCtEth += 1
-                    if not item[FOUND]:
+                    if not item[FOUND] and not item[FOUND_ETH]:
                         itemsLeft += 1
-                    if not item[FOUND_ETH]:
-                        itemsLeftEth += 1
-                elif eth == 2:
+                elif eth == ETH_NORMAL_ONLY:
                     itemCt += 1
                     if not item[FOUND]:
                         itemsLeft += 1
@@ -349,9 +341,7 @@ def process(cmdStr):
  
     global item_groups
     global itemCt
-    global itemCtEth
     global itemsLeft
-    global itemsLeftEth
  
     tokens = cmdStr.split()
     
@@ -376,13 +366,13 @@ def process(cmdStr):
             print '  listgroups/lg = list item group names'
             print '  listsubgroups/lsg <group> = list subgroups from a group, prints first group it finds'
             print '  list/l <subgroup> = list items from a subgroup, prints first subgroup it finds'
-            print '  listfoundall/lfa <found, optional> = list all unfound items'
-            print '  listfoundalleth/lfae <found, optional> = list all unfound eth items'
-            print '  listfound/lf <subgroup> <found, optional> = list found items from a subgroup, prints first subgroup it finds'
-            print '  listfound/lfe <subgroup> <found, optional> = list found eth items from a subgroup, prints first subgroup it finds'
+            print '  listfoundall/lfa = list all unfound items'
+            print '  listfound/lf <subgroup> = list found items from a subgroup, prints first subgroup it finds'
             print '  print/p <name> = print item(s) with that name, prints location in stash'
-            print '  markfind/mf <name> <unfound, optional> = mark item as found, prints location in stash'
-            print '  markfindeth/mfe <name> <unfound, optional> = mark eth item as found, prints location in stash'
+            print '  markfind/mf <name> = mark item as found, prints location in stash'
+            print '  markfindeth/mfe <name> = mark eth item as found, prints location in stash'
+            print '  unmarkfind/uf <name> = unmark item as found, prints location in stash'
+            print '  unmarkfindeth/ufe <name> = unmark eth item as found, prints location in stash'
             print '  comment/c <name> = updates comment field for name'
             
         elif cmd == 'lg' or cmd == 'listgroups':
@@ -446,61 +436,21 @@ def process(cmdStr):
                 for (gname, subgroup) in group:
                     items = []
                     for item in subgroup:
-                        if unfound and item[ETH] != ETH_ETH_ONLY and not item[FOUND]:
-                            items.append(item)
-                        elif unfound and item[ETH] == ETH_ETH_ONLY and not item[FOUND_ETH]:
-                            items.append(item)
-                        elif not unfound and item[ETH] != ETH_ETH_ONLY and item[FOUND]:
-                            items.append(item)
-                        elif not unfound and item[ETH] == ETH_ETH_ONLY and item[FOUND]:
+                        if not item[FOUND] and not item[FOUND_ETH]:
                             items.append(item)
                     if len(items):
                         print gname
                         for item in items:
                             printItem(item, PRINT_SHORT_NO_FOUND)
+                        print ''
 
             print ''
-            if unfound:
-                print '  Total: ' + str(itemsLeft) + ' / ' + str(itemCt)
-            else:
-                print '  Total: ' + str(itemCt - itemsLeft) + ' / ' + str(itemCt)
-            
-        elif cmd == 'lfae' or cmd == 'listfoundalleth':
-
-            unfound = True
-            if len(tokens) >= 2:
-                found = tokens[1].lower()
-                unfound = found != 'found'
-                
-            for (_, group) in item_groups:
-                for (gname, subgroup) in group:
-                    
-                    items = []                    
-                    for item in subgroup:
-                        if unfound and item[ETH] == ETH_BOTH and not item[FOUND_ETH]:
-                            items.append(item)
-                        elif not unfound and item[ETH] == ETH_BOTH and item[FOUND_ETH]:
-                            items.append(item)
-                    if len(items):
-                        print gname
-                        for item in items:
-                            printItem(item, PRINT_SHORT_NO_FOUND, True)
-                            
-            print ''
-            if unfound:
-                print '  Total: ' + str(itemsLeftEth) + ' / ' + str(itemCtEth)
-            else:
-                print '  Total: ' + str(itemCtEth - itemsLeftEth) + ' / ' + str(itemCtEth)
+            print '  Total: ' + str(itemsLeft) + ' / ' + str(itemCt)
             
         elif cmd == 'lf' or cmd == 'listfound':
         
             if len(tokens) >= 2:
             
-                unfound = True
-                if len(tokens) >= 3:
-                    found = tokens[2].lower()
-                    unfound = found != 'found'
-            
                 grp = tokens[1]
                 grp = clean(grp)
                 
@@ -514,14 +464,9 @@ def process(cmdStr):
                             print name
                             hit = True
                             for item in subgroup:
-                                if unfound:
-                                    if not item[FOUND] or (item[ETH] == ETH_ETH_ONLY and not item[FOUND_ETH]):
-                                        printItem(item, PRINT_SHORT_NO_FOUND)
-                                        ct += 1
-                                else:
-                                    if item[FOUND] or (item[ETH] == ETH_ETH_ONLY and item[FOUND_ETH]):
-                                        printItem(item, PRINT_SHORT_NO_FOUND)
-                                        ct += 1
+                                if not item[FOUND] and not item[FOUND_ETH]:
+                                    printItem(item, PRINT_SHORT_NO_FOUND)
+                                    ct += 1
                             break
                     if hit:
                         break
@@ -529,53 +474,7 @@ def process(cmdStr):
                     print '  Subgroup not found...'
                 else:
                     print ''
-                    if unfound:
-                        print '  Reg items left to find: ' + str(ct)
-                    else:
-                        print '  Reg items found: ' + str(ct)
-            else:
-                print '  Not enough arguments, missing subgroup name...'
-                
-        elif cmd == 'lfe' or cmd == 'listfoundeth':
-        
-            if len(tokens) >= 2:
-                grp = tokens[1]
-                grp = clean(grp)
-                
-                unfound = True
-                if len(tokens) >= 3:
-                    found = tokens[2].lower()
-                    unfound = found != 'found'
-                
-                hit = False
-                ct = 0
-                for (_, group) in item_groups:
-                    for (name, subgroup) in group:
-                        n = clean(name)
-                        if re.search(grp, n):
-                            print ''
-                            print name
-                            hit = True
-                            for item in subgroup:
-                                if unfound:
-                                    if item[ETH] == ETH_BOTH and not item[FOUND_ETH]:
-                                        printItem(item, PRINT_SHORT_NO_FOUND, True)
-                                        ct += 1
-                                else:
-                                    if item[ETH] == ETH_BOTH and item[FOUND_ETH]:
-                                        printItem(item, PRINT_SHORT_NO_FOUND, True)
-                                        ct += 1
-                            break
-                    if hit:
-                        break
-                if not hit:
-                    print '  Subgroup not found...'
-                else:
-                    print ''
-                    if unfound:
-                        print '  Eth items left to find: ' + str(ct)
-                    else:
-                        print '  Eth items found: ' + str(ct)
+                    print '  Reg items left to find: ' + str(ct)
             else:
                 print '  Not enough arguments, missing subgroup name...'
                 
@@ -601,30 +500,22 @@ def process(cmdStr):
                 name = tokens[1]                
                 res = searchItems(name)
                 
-                markFound = True
-                if len(tokens) >= 3:
-                    markFound = tokens[2].lower()
-                    markFound = markFound != 'unfound'
-                
                 if len(res) == 1:
                     item = res[0]
                     eth = item[ETH]
                     if eth == ETH_ETH_ONLY:
                         print '  Cannot mark non-eth item for eth only item...'
                     else:
-                        if item[FOUND] == markFound:
+                        if item[FOUND]:
                             printItem(item, PRINT_SHORT_NO_FOUND)
                             print ''
-                            if markFound:
-                                print '  Already marked as found...'
-                            else:
-                                print '  Already marked as unfound...'
+                            print '  Already marked as found...'
+
                         else:
-                            if markFound:
+                            # subtract item ct if we havent already found eth version
+                            if not item[FOUND_ETH]:
                                 itemsLeft -= 1
-                            else:
-                                itemsLeft += 1
-                            item[FOUND] = markFound
+                            item[FOUND] = True
                             printItem(item, PRINT_SHORT_NO_FOUND)
                             print ''
                             print '  Updated...  Items Left: ' + str(itemsLeft)
@@ -648,11 +539,6 @@ def process(cmdStr):
                 name = tokens[1]                
                 res = searchItems(name)
                 
-                markFound = True
-                if len(tokens) >= 3:
-                    markFound = tokens[2].lower()
-                    markFound = markFound != 'unfound'
-                
                 if len(res) == 1:
                     item = res[0]
                     eth = item[ETH]
@@ -662,25 +548,94 @@ def process(cmdStr):
                         if item[FOUND_ETH]:
                             printItem(item, PRINT_SHORT_NO_FOUND, True)
                             print ''
-                            if markFound:
-                                print '  Already marked as found...'
-                            else:
-                                print '  Already marked as unfound...'
+                            print '  Already marked as found...'
+                            
                         else:
-                            if eth == ETH_BOTH:
-                                if markFound:
-                                    itemsLeftEth -= 1
-                                else:
-                                    itemsLeftEth += 1
-                            else:
-                                if markFound:
-                                    itemsLeft -= 1
-                                else:
-                                    itemsLeft += 1
+                            # subtract item ct if we havent already found non-eth version
+                            if not item[FOUND]:
+                                itemsLeft -= 1
                             item[FOUND_ETH] = True
                             printItem(item, PRINT_SHORT_NO_FOUND, True)
                             print ''
-                            print '  Updated...  Items Left (eth): ' + str(itemsLeftEth)
+                            print '  Updated...  Items Left: ' + str(itemsLeft)
+                            
+                elif len(res) == 0:
+                    print '  No item found...'
+                else:
+                    num = min(len(res), 10)
+                    for i in range(num):
+                        printItem(res[i], PRINT_SHORT_NO_FOUND)
+                    if num < len(res):
+                        print '  ...'
+                    print ''
+                    print '  Narrow search...'
+            else:
+                print '  Not enough arguments, missing item name...'
+                
+        elif cmd == 'uf' or cmd == 'unmarkfind':
+        
+            if len(tokens) >= 2:
+                name = tokens[1]                
+                res = searchItems(name)
+                
+                if len(res) == 1:
+                    item = res[0]
+                    eth = item[ETH]
+                    if eth == ETH_ETH_ONLY:
+                        print '  Cannot unmark non-eth item for eth only item...'
+                    else:
+                        if not item[FOUND]:
+                            printItem(item, PRINT_SHORT_NO_FOUND)
+                            print ''
+                            print '  Already marked as NOT found...'
+
+                        else:
+                            # add item ct if we havent already found eth version
+                            if not item[FOUND_ETH]:
+                                itemsLeft += 1
+                            item[FOUND] = False
+                            printItem(item, PRINT_SHORT_NO_FOUND)
+                            print ''
+                            print '  Updated...  Items Left: ' + str(itemsLeft)
+                elif len(res) == 0:
+                    print '  No item found...'
+                else:
+                    num = min(len(res), 10)
+                    for i in range(num):
+                        printItem(res[i], PRINT_SHORT_NO_FOUND)
+                    if num < len(res):
+                        print '  ...'
+                    print ''
+                    print '  Narrow search...'
+                    
+            else:
+                print '  Not enough arguments, missing item name...'
+                
+        elif cmd == 'ufe' or cmd == 'unmarkfindeth':
+        
+            if len(tokens) >= 2:
+                name = tokens[1]                
+                res = searchItems(name)
+                
+                if len(res) == 1:
+                    item = res[0]
+                    eth = item[ETH]
+                    if eth == ETH_NORMAL_ONLY:
+                        print '  Cannot unmark eth item for non-eth only item...'
+                    else:
+                        if not item[FOUND_ETH]:
+                            printItem(item, PRINT_SHORT_NO_FOUND, True)
+                            print ''
+                            print '  Already marked as NOT found...'
+                            
+                        else:
+                            # add item ct if we havent already found non-eth version
+                            if not item[FOUND]:
+                                itemsLeft += 1
+                            item[FOUND_ETH] = False
+                            printItem(item, PRINT_SHORT_NO_FOUND, True)
+                            print ''
+                            print '  Updated...  Items Left: ' + str(itemsLeft)
                             
                 elif len(res) == 0:
                     print '  No item found...'
@@ -747,7 +702,6 @@ print ''
 print 'Holy Grail Tracking Program'
 print ''
 print '  Items Left:       ' + str(itemsLeft)
-print '  Items Left (eth): ' + str(itemsLeftEth)
 print ''
 
 while result:
