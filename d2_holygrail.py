@@ -467,9 +467,9 @@ def process(cmdStr):
                         break
                 if not hit:
                     print '  Subgroup not found...'
-                else:
+                elif not ct:
                     print ''
-                    print '  Reg items left to find: ' + str(ct)
+                    print '  All items found.'
             else:
                 print '  Not enough arguments, missing subgroup name...'
                 
