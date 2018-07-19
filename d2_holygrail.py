@@ -306,11 +306,11 @@ def printItem(item, pr = PRINT_LONG, printEthLoc = False, maxName = 0, maxType =
     h = item[ITEM_HT]
     tier = item[TIER]
     if tier == TIER_NORMAL:
-        tier = ' (Norml)'
+        tier = '(Norml)'
     elif tier == TIER_EXCEPTIONAL:
-        tier = ' (Excpt)'
+        tier = '(Excpt)'
     elif tier == TIER_ELITE:
-        tier = ' (Elite)'
+        tier = '(Elite)'
     eth = item[ETH]
     found = item[FOUND]
     foundEth = item[FOUND_ETH]
@@ -348,9 +348,9 @@ def printItem(item, pr = PRINT_LONG, printEthLoc = False, maxName = 0, maxType =
     if pr == PRINT_SHORT:
         if foundEth == 'X':
             found = 'X'
-        print '  ' + name.ljust(maxName) + '  ' + type.ljust(maxType) + ' ' + tier + ('  Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '  Found: %s' % (found) + '   Com: ' + comment
+        print '  ' + name.ljust(maxName) + '   ' + type.ljust(maxType) + ' ' + tier + ('   Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '  Found: %s' % (found) + '   Com: ' + comment
     elif pr == PRINT_SHORT_NO_FOUND:
-        print '  ' + name.ljust(maxName) + '  ' + type.ljust(maxType) + ' ' + tier + ('  Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '   Com: ' + comment
+        print '  ' + name.ljust(maxName) + '   ' + type.ljust(maxType) + ' ' + tier + ('   Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '   Com: ' + comment
     else:
         print '\n  ' + name
         print '\n  ' + type + tier + ', ' + str(w) + 'x' + str(h)
