@@ -284,9 +284,9 @@ def printItem(item, pr = PRINT_LONG, printEthLoc = False):
     h = item[ITEM_HT]
     tier = item[TIER]
     if tier == TIER_NORMAL:
-        tier = 'Normal'
+        tier = 'Norm '
     elif tier == TIER_EXCEPTIONAL:
-        tier = 'Exceptional'
+        tier = 'Excpt'
     elif tier == TIER_ELITE:
         tier = 'Elite'
     eth = item[ETH]
@@ -299,24 +299,24 @@ def printItem(item, pr = PRINT_LONG, printEthLoc = False):
     
     if eth == ETH_BOTH:
         if found:
-            found = 'Y'
+            found = 'X'
         else:
-            found = 'n'
+            found = '_'
         if foundEth:
-            foundEth = 'Y'
+            foundEth = 'X'
         else:
-            foundEth = 'n'
+            foundEth = '_'
     elif eth == ETH_NORMAL_ONLY:
         if found:
-            found = 'Y'
+            found = 'X'
         else:
-            found = 'n'
+            found = '_'
         foundEth = '_'
     elif eth == ETH_ETH_ONLY:
         if foundEth:
-            foundEth = 'Y'
+            foundEth = 'X'
         else:
-            foundEth = 'n'
+            foundEth = '_'
         found = '_'
         
     px = x
@@ -324,12 +324,14 @@ def printItem(item, pr = PRINT_LONG, printEthLoc = False):
         px += item[ITEM_WD]
     
     if pr == PRINT_SHORT:
-        print '  ' + name + ', ' + type + ' (' + tier + '), Loc: ' + str(page) + ' (' + str(px) + ',' + str(y) + '), Found: %s, %s' % (found, foundEth) + ', Com: ' + comment
+        if foundEth == 'X':
+            found = 'X'
+        print '  ' + name + ', ' + type + ' (' + tier + '), Loc: ' + str(page) + ' (' + str(px) + ',' + str(y) + '), Found: %s' % (found) + ', Com: ' + comment
     elif pr == PRINT_SHORT_NO_FOUND:
         print '  ' + name + ', ' + type + ' (' + tier + '), Loc: ' + str(page) + ' (' + str(px) + ',' + str(y) + '), Com: ' + comment
     else:
-        print '  ' + name
-        print '  ' + type + ' (' + tier + '), ' + str(w) + 'x' + str(h)
+        print '\n  ' + name
+        print '\n  ' + type + ' (' + tier + '), ' + str(w) + 'x' + str(h)
         print '  Found Reg: %s    Found Eth: %s' % (found, foundEth)
         print '  Comment:'
         print '    ' + comment  
@@ -648,19 +650,14 @@ def process(cmdStr):
         elif cmd == 'c' or cmd == 'comment':
         
             if len(tokens) >= 2:
-                name = ''.join(tokens[1:])           
+                name = ''.join(tokens[1:])  
                 res = searchItems(name)
                 
                 if len(res) == 1:
                     item = res[0]
                     
-                    comment = ''
-                    for i in range(2, len(tokens)):
-                        if i == 2:
-                            comment += tokens[i]
-                        else:
-                            comment += ' ' + tokens[i]
-                        
+                    comment = raw_input('\n  Enter a comment:\n    ')
+                    
                     if comment != '':
                         item[COMMENT] = comment
                         printItem(item)
@@ -669,7 +666,7 @@ def process(cmdStr):
                     else:
                         print '  No comment to update...'
                 elif len(res) == 0:
-                    print '  no item found...'
+                    print '  No item found...'
                 else:
                     num = min(len(res), 10)
                     for i in range(num):
