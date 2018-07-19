@@ -352,14 +352,20 @@ def printItem(item, pr = PRINT_LONG, printEthLoc = False, maxName = 0, maxType =
     elif pr == PRINT_SHORT_NO_FOUND:
         print '  ' + name.ljust(maxName) + '   ' + type.ljust(maxType) + ' ' + tier + ('   Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '   Com: ' + comment
     else:
-        print '\n  ' + name
-        print '\n  ' + type + tier + ', ' + str(w) + 'x' + str(h)
-        print '  Found Reg: %s    Found Eth: %s' % (found, foundEth)
+        print ''
+        print '  ' + name
+        print '  ' + type + ' ' + tier + ', ' + str(w) + 'x' + str(h)
+        print ''
+        print '  Found Reg: %s' % (found)
+        print '  Found Eth: %s' % (foundEth)
+        print ''
+        print '  Location:  Pg ' + str(page) + ', Offset (' + str(x) + ',' + str(y) + ')'
+        if eth == ETH_BOTH:
+            print '     (eth):  Pg ' + str(page) + ', Offset (' + str(x + item[ITEM_WD]) + ',' + str(y) + ')'
+            
+        print ''
         print '  Comment:'
         print '    ' + comment  
-        print '  Location      :  Page ' + str(page).ljust(3) + ', Offset (' + str(x).ljust(2) + ',' + str(y).ljust(2) + ')'
-        if eth == ETH_BOTH:
-            print '  Location (eth):  Page ' + str(page).ljust(3) + ', Offset (' + str(x + item[ITEM_WD]).ljust(2) + ', ' + str(y).ljust(2) + ')'
     
 def process(cmdStr):
  
@@ -691,8 +697,8 @@ def process(cmdStr):
                 
                 if len(res) == 1:
                     item = res[0]
-                    
-                    comment = raw_input('\n  Enter a comment:\n    ')
+
+                    comment = raw_input('\n  Enter comment - %s:\n    ' % (item[NAME]))
                     
                     if comment != '':
                         item[COMMENT] = comment
