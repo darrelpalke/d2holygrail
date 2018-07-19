@@ -276,19 +276,41 @@ def searchItems(name):
 PRINT_LONG = 0
 PRINT_SHORT = 1
 PRINT_SHORT_NO_FOUND = 2
+
+def printItems(items, numToPrint, pr = PRINT_LONG, printEthLoc = False):
+    maxName = 0
+    maxType = 0
     
-def printItem(item, pr = PRINT_LONG, printEthLoc = False):
+    for item in items:
+        name = item[NAME]
+        type = item[TYPE]
+        
+        maxName = max(maxName, len(name))
+        maxType = max(maxType, len(type))
+        
+    printItemsMax(items, numToPrint, pr, printEthLoc, maxName, maxType)
+    
+def printItemsMax(items, numToPrint, pr, printEthLoc, maxName, maxType):
+
+    ct = 0
+    for item in items:
+        printItem(item, pr, printEthLoc, maxName, maxType)
+        ct += 1
+        if ct >= numToPrint:
+            break
+
+def printItem(item, pr = PRINT_LONG, printEthLoc = False, maxName = 0, maxType = 0):
     name = item[NAME]
     type = item[TYPE]
     w = item[ITEM_WD]
     h = item[ITEM_HT]
     tier = item[TIER]
     if tier == TIER_NORMAL:
-        tier = 'Norm '
+        tier = ' (Norml)'
     elif tier == TIER_EXCEPTIONAL:
-        tier = 'Excpt'
+        tier = ' (Excpt)'
     elif tier == TIER_ELITE:
-        tier = 'Elite'
+        tier = ' (Elite)'
     eth = item[ETH]
     found = item[FOUND]
     foundEth = item[FOUND_ETH]
@@ -326,18 +348,18 @@ def printItem(item, pr = PRINT_LONG, printEthLoc = False):
     if pr == PRINT_SHORT:
         if foundEth == 'X':
             found = 'X'
-        print '  ' + name + ', ' + type + ' (' + tier + '), Loc: ' + str(page) + ' (' + str(px) + ',' + str(y) + '), Found: %s' % (found) + ', Com: ' + comment
+        print '  ' + name.ljust(maxName) + '  ' + type.ljust(maxType) + ' ' + tier + ('  Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '  Found: %s' % (found) + '   Com: ' + comment
     elif pr == PRINT_SHORT_NO_FOUND:
-        print '  ' + name + ', ' + type + ' (' + tier + '), Loc: ' + str(page) + ' (' + str(px) + ',' + str(y) + '), Com: ' + comment
+        print '  ' + name.ljust(maxName) + '  ' + type.ljust(maxType) + ' ' + tier + ('  Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '   Com: ' + comment
     else:
         print '\n  ' + name
-        print '\n  ' + type + ' (' + tier + '), ' + str(w) + 'x' + str(h)
+        print '\n  ' + type + tier + ', ' + str(w) + 'x' + str(h)
         print '  Found Reg: %s    Found Eth: %s' % (found, foundEth)
         print '  Comment:'
         print '    ' + comment  
-        print '  Location      :  Page ' + str(page) + ', Offset (' + str(x) + ', ' + str(y) + ')'
+        print '  Location      :  Page ' + str(page).ljust(3) + ', Offset (' + str(x).ljust(2) + ',' + str(y).ljust(2) + ')'
         if eth == ETH_BOTH:
-            print '  Location (eth):  Page ' + str(page) + ', Offset (' + str(x + item[ITEM_WD]) + ', ' + str(y) + ')'
+            print '  Location (eth):  Page ' + str(page).ljust(3) + ', Offset (' + str(x + item[ITEM_WD]).ljust(2) + ', ' + str(y).ljust(2) + ')'
     
 def process(cmdStr):
  
@@ -417,8 +439,7 @@ def process(cmdStr):
                             print ''
                             print name
                             found = True
-                            for item in subgroup:
-                                printItem(item, PRINT_SHORT)
+                            printItems(subgroup, len(subgroup), PRINT_SHORT)
                             break
                     if found:
                         break
@@ -429,6 +450,17 @@ def process(cmdStr):
 
         elif cmd == 'lfa' or cmd == 'listfoundall':
             
+            maxName = 0
+            maxType = 0
+            
+            for (_, group) in item_groups:
+                for (gname, subgroup) in group:
+                    items = []
+                    for item in subgroup:
+                        if not item[FOUND] and not item[FOUND_ETH]:
+                            maxName = max(maxName, len(item[NAME]))
+                            maxType = max(maxType, len(item[TYPE]))
+                        
             for (_, group) in item_groups:
                 for (gname, subgroup) in group:
                     items = []
@@ -438,7 +470,7 @@ def process(cmdStr):
                     if len(items):
                         print gname
                         for item in items:
-                            printItem(item, PRINT_SHORT_NO_FOUND)
+                            printItem(item, PRINT_SHORT_NO_FOUND, False, maxName, maxType)
                         print ''
 
             print ''
@@ -448,11 +480,25 @@ def process(cmdStr):
         
             if len(tokens) >= 2:
             
+                maxName = 0
+                maxType = 0
+                
                 grp = ''.join(tokens[1:])
                 grp = clean(grp)
                 
                 hit = False
-                ct = 0
+
+                for (_, group) in item_groups:
+                    for (name, subgroup) in group:
+                        n = clean(name)
+                        if re.search(grp, n):
+                            hit = True
+                            items = []
+                            for item in subgroup:
+                                if not item[FOUND] and not item[FOUND_ETH]:
+                                    maxName = max(maxName, len(item[NAME]))
+                                    maxType = max(maxType, len(item[TYPE]))
+                            
                 for (_, group) in item_groups:
                     for (name, subgroup) in group:
                         n = clean(name)
@@ -460,18 +506,17 @@ def process(cmdStr):
                             print ''
                             print name
                             hit = True
+                            items = []
                             for item in subgroup:
                                 if not item[FOUND] and not item[FOUND_ETH]:
-                                    printItem(item, PRINT_SHORT_NO_FOUND)
-                                    ct += 1
-                            break
-                    if hit:
-                        break
+                                    items.append(item)
+                            printItemsMax(items, len(items), PRINT_SHORT_NO_FOUND, False, maxName, maxType)
+                            if len(items) == 0:
+                                print ''
+                                print '  All items found.'
+                            
                 if not hit:
                     print '  Subgroup not found...'
-                elif not ct:
-                    print ''
-                    print '  All items found.'
             else:
                 print '  Not enough arguments, missing subgroup name...'
                 
@@ -486,8 +531,7 @@ def process(cmdStr):
                 elif len(res) == 0:
                     print '  No items found...'
                 else:
-                    for i in res:
-                        printItem(i, PRINT_SHORT)
+                    printItems(res, len(res), PRINT_SHORT)
             else:
                 print '  Not enough arguments, missing item name...'
                 
@@ -519,11 +563,9 @@ def process(cmdStr):
                 elif len(res) == 0:
                     print '  No item found...'
                 else:
-                    num = min(len(res), 10)
-                    for i in range(num):
-                        printItem(res[i], PRINT_SHORT_NO_FOUND)
-                    if num < len(res):
-                        print '  ...'
+                    printItems(res, 10, PRINT_SHORT_NO_FOUND)
+                    if len(res) > 10:
+                        print '    ...'
                     print ''
                     print '  Narrow search...'
                     
@@ -559,11 +601,9 @@ def process(cmdStr):
                 elif len(res) == 0:
                     print '  No item found...'
                 else:
-                    num = min(len(res), 10)
-                    for i in range(num):
-                        printItem(res[i], PRINT_SHORT_NO_FOUND)
-                    if num < len(res):
-                        print '  ...'
+                    printItems(res, 10, PRINT_SHORT_NO_FOUND)
+                    if len(res) > 10:
+                        print '    ...'
                     print ''
                     print '  Narrow search...'
             else:
@@ -597,11 +637,9 @@ def process(cmdStr):
                 elif len(res) == 0:
                     print '  No item found...'
                 else:
-                    num = min(len(res), 10)
-                    for i in range(num):
-                        printItem(res[i], PRINT_SHORT_NO_FOUND)
-                    if num < len(res):
-                        print '  ...'
+                    printItems(res, 10, PRINT_SHORT_NO_FOUND)
+                    if len(res) > 10:
+                        print '    ...'
                     print ''
                     print '  Narrow search...'
                     
@@ -637,11 +675,9 @@ def process(cmdStr):
                 elif len(res) == 0:
                     print '  No item found...'
                 else:
-                    num = min(len(res), 10)
-                    for i in range(num):
-                        printItem(res[i], PRINT_SHORT_NO_FOUND)
-                    if num < len(res):
-                        print '  ...'
+                    printItems(res, 10, PRINT_SHORT_NO_FOUND)
+                    if len(res) > 10:
+                        print '    ...'
                     print ''
                     print '  Narrow search...'
             else:
@@ -668,11 +704,9 @@ def process(cmdStr):
                 elif len(res) == 0:
                     print '  No item found...'
                 else:
-                    num = min(len(res), 10)
-                    for i in range(num):
-                        printItem(res[i], PRINT_SHORT_NO_FOUND)
-                    if num < len(res):
-                        print '  ...'
+                    printItems(res, 10, PRINT_SHORT_NO_FOUND)
+                    if len(res) > 10:
+                        print '    ...'
                     print ''
                     print '  Narrow search...'
             else:
