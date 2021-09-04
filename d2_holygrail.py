@@ -200,7 +200,7 @@ def readfile():
             currentsubgroup.append([name, type, w, h, tier, eth, found, foundEth, comment, page, x, y])
         
         elif len(members) > 1:
-            print 'malformed INPUT!!!!', members
+            print('malformed INPUT!!!!', members)
 
     if len(currentsubgroup):
         currentgroup.append(currentsubgroup)
@@ -348,24 +348,24 @@ def printItem(item, pr = PRINT_LONG, printEthLoc = False, maxName = 0, maxType =
     if pr == PRINT_SHORT:
         if foundEth == 'X':
             found = 'X'
-        print '  ' + name.ljust(maxName) + '   ' + type.ljust(maxType) + ' ' + tier + ('   Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '  Found: %s' % (found) + '   Com: ' + comment
+        print('  ' + name.ljust(maxName) + '   ' + type.ljust(maxType) + ' ' + tier + ('   Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '  Found: %s' % (found) + '   Com: ' + comment)
     elif pr == PRINT_SHORT_NO_FOUND:
-        print '  ' + name.ljust(maxName) + '   ' + type.ljust(maxType) + ' ' + tier + ('   Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '   Com: ' + comment
+        print('  ' + name.ljust(maxName) + '   ' + type.ljust(maxType) + ' ' + tier + ('   Loc: %s (%s, %s)' % (str(page), str(px), str(y))).ljust(19) + '   Com: ' + comment)
     else:
-        print ''
-        print '  ' + name
-        print '  ' + type + ' ' + tier + ', ' + str(w) + 'x' + str(h)
-        print ''
-        print '  Found Reg: %s' % (found)
-        print '  Found Eth: %s' % (foundEth)
-        print ''
-        print '  Location:  Pg ' + str(page) + ', Offset (' + str(x) + ',' + str(y) + ')'
+        print('')
+        print('  ' + name)
+        print('  ' + type + ' ' + tier + ', ' + str(w) + 'x' + str(h))
+        print('')
+        print('  Found Reg: %s' % (found))
+        print('  Found Eth: %s' % (foundEth))
+        print('')
+        print('  Location:  Pg ' + str(page) + ', Offset (' + str(x) + ',' + str(y) + ')')
         if eth == ETH_BOTH:
-            print '     (eth):  Pg ' + str(page) + ', Offset (' + str(x + item[ITEM_WD]) + ',' + str(y) + ')'
+            print('     (eth):  Pg ' + str(page) + ', Offset (' + str(x + item[ITEM_WD]) + ',' + str(y) + ')')
             
-        print ''
-        print '  Comment:'
-        print '    ' + comment  
+        print('')
+        print('  Comment:')
+        print('    ' + comment)
     
 def process(cmdStr):
  
@@ -378,38 +378,38 @@ def process(cmdStr):
     rv = True;
     
     if len(tokens) == 0:
-        print '  Invalid 0-length command.'
+        print('  Invalid 0-length command.')
     else:
         cmd = tokens[0]
         cmd = cmd.lower()
         
         if cmd == 'q' or cmd == 'quit':
         
-            print '  Quitting...'
+            print('  Quitting...')
             rv = False
             
         elif cmd == 'h' or cmd == 'help':    
 
-            print ''
-            print '  quit/q = quit'
-            print '  help/h = help'
-            print '  listgroups/lg = list item group names'
-            print '  listsubgroups/lsg <group> = list subgroups from a group, prints first group it finds'
-            print '  list/l <subgroup> = list items from a subgroup, prints first subgroup it finds'
-            print '  listfoundall/lfa = list all unfound items'
-            print '  listfound/lf <subgroup> = list found items from a subgroup, prints first subgroup it finds'
-            print '  print/p <name> = print item(s) with that name, prints location in stash'
-            print '  markfind/mf <name> = mark item as found, prints location in stash'
-            print '  markfindeth/mfe <name> = mark eth item as found, prints location in stash'
-            print '  unmarkfind/uf <name> = unmark item as found, prints location in stash'
-            print '  unmarkfindeth/ufe <name> = unmark eth item as found, prints location in stash'
-            print '  comment/c <name> = updates comment field for name'
+            print('')
+            print('  quit/q = quit')
+            print('  help/h = help')
+            print('  listgroups/lg = list item group names')
+            print('  listsubgroups/lsg <group> = list subgroups from a group, prints first group it finds')
+            print('  list/l <subgroup> = list items from a subgroup, prints first subgroup it finds')
+            print('  listfoundall/lfa = list all unfound items')
+            print('  listfound/lf <subgroup> = list found items from a subgroup, prints first subgroup it finds')
+            print('  print/p <name> = print(item(s) with that name, prints location in stash')
+            print('  markfind/mf <name> = mark item as found, prints location in stash')
+            print('  markfindeth/mfe <name> = mark eth item as found, prints location in stash')
+            print('  unmarkfind/uf <name> = unmark item as found, prints location in stash')
+            print('  unmarkfindeth/ufe <name> = unmark eth item as found, prints location in stash')
+            print('  comment/c <name> = updates comment field for name')
             
         elif cmd == 'lg' or cmd == 'listgroups':
         
-            print ''
+            print('')
             for (name, _) in item_groups:
-                print '  ' + name
+                print('  ' + name)
                 
         elif cmd == 'lsg' or cmd == 'listsubgroups':
         
@@ -422,14 +422,14 @@ def process(cmdStr):
                     n = clean(name)
                     if re.search(grp, n):
                         found = True
-                        print ''
+                        print('')
                         for (sname, _) in group:
-                            print '  ' + sname
+                            print('  ' + sname)
                         break
                 if not found:
-                    print '  Group not found...'
+                    print('  Group not found...')
             else:
-                print '  Not enough arguments, missing group name...'
+                print('  Not enough arguments, missing group name...')
                 
         elif cmd == 'l' or cmd == 'list':
         
@@ -442,17 +442,17 @@ def process(cmdStr):
                     for (name, subgroup) in group:
                         n = clean(name)
                         if re.search(grp, n):
-                            print ''
-                            print name
+                            print('')
+                            print(name)
                             found = True
                             printItems(subgroup, len(subgroup), PRINT_SHORT)
                             break
                     if found:
                         break
                 if not found:
-                    print '  Subgroup not found...'
+                    print('  Subgroup not found...')
             else:
-                print '  Not enough arguments, missing subgroup name...'
+                print('  Not enough arguments, missing subgroup name...')
 
         elif cmd == 'lfa' or cmd == 'listfoundall':
             
@@ -474,13 +474,13 @@ def process(cmdStr):
                         if not item[FOUND] and not item[FOUND_ETH]:
                             items.append(item)
                     if len(items):
-                        print gname
+                        print(gname)
                         for item in items:
                             printItem(item, PRINT_SHORT_NO_FOUND, False, maxName, maxType)
-                        print ''
+                        print('')
 
-            print ''
-            print '  Total: ' + str(itemsLeft) + ' / ' + str(itemCt)
+            print('')
+            print('  Total: ' + str(itemsLeft) + ' / ' + str(itemCt))
             
         elif cmd == 'lf' or cmd == 'listfound':
         
@@ -509,8 +509,8 @@ def process(cmdStr):
                     for (name, subgroup) in group:
                         n = clean(name)
                         if re.search(grp, n):
-                            print ''
-                            print name
+                            print('')
+                            print(name)
                             hit = True
                             items = []
                             for item in subgroup:
@@ -518,13 +518,13 @@ def process(cmdStr):
                                     items.append(item)
                             printItemsMax(items, len(items), PRINT_SHORT_NO_FOUND, False, maxName, maxType)
                             if len(items) == 0:
-                                print ''
-                                print '  All items found.'
+                                print('')
+                                print('  All items found.')
                             
                 if not hit:
-                    print '  Subgroup not found...'
+                    print('  Subgroup not found...')
             else:
-                print '  Not enough arguments, missing subgroup name...'
+                print('  Not enough arguments, missing subgroup name...')
                 
         elif cmd == 'p' or cmd == 'print':
         
@@ -535,11 +535,11 @@ def process(cmdStr):
                 if len(res) == 1:
                     printItem(res[0])
                 elif len(res) == 0:
-                    print '  No items found...'
+                    print('  No items found...')
                 else:
                     printItems(res, len(res), PRINT_SHORT)
             else:
-                print '  Not enough arguments, missing item name...'
+                print('  Not enough arguments, missing item name...')
                 
         elif cmd == 'mf' or cmd == 'markfind':
         
@@ -551,12 +551,12 @@ def process(cmdStr):
                     item = res[0]
                     eth = item[ETH]
                     if eth == ETH_ETH_ONLY:
-                        print '  Cannot mark non-eth item for eth only item...'
+                        print('  Cannot mark non-eth item for eth only item...')
                     else:
                         if item[FOUND]:
                             printItem(item, PRINT_SHORT_NO_FOUND)
-                            print ''
-                            print '  Already marked as found...'
+                            print('')
+                            print('  Already marked as found...')
 
                         else:
                             # subtract item ct if we havent already found eth version
@@ -564,19 +564,19 @@ def process(cmdStr):
                                 itemsLeft -= 1
                             item[FOUND] = True
                             printItem(item, PRINT_SHORT_NO_FOUND)
-                            print ''
-                            print '  Updated...  Items Left: ' + str(itemsLeft)
+                            print('')
+                            print('  Updated...  Items Left: ' + str(itemsLeft))
                 elif len(res) == 0:
-                    print '  No item found...'
+                    print('  No item found...')
                 else:
                     printItems(res, 10, PRINT_SHORT_NO_FOUND)
                     if len(res) > 10:
-                        print '    ...'
-                    print ''
-                    print '  Narrow search...'
+                        print('    ...')
+                    print('')
+                    print('  Narrow search...')
                     
             else:
-                print '  Not enough arguments, missing item name...'
+                print('  Not enough arguments, missing item name...')
                 
         elif cmd == 'mfe' or cmd == 'markfindeth':
         
@@ -588,12 +588,12 @@ def process(cmdStr):
                     item = res[0]
                     eth = item[ETH]
                     if eth == ETH_NORMAL_ONLY:
-                        print '  Cannot mark eth item for non-eth only item...'
+                        print('  Cannot mark eth item for non-eth only item...')
                     else:
                         if item[FOUND_ETH]:
                             printItem(item, PRINT_SHORT_NO_FOUND, True)
-                            print ''
-                            print '  Already marked as found...'
+                            print('')
+                            print('  Already marked as found...')
                             
                         else:
                             # subtract item ct if we havent already found non-eth version
@@ -601,19 +601,19 @@ def process(cmdStr):
                                 itemsLeft -= 1
                             item[FOUND_ETH] = True
                             printItem(item, PRINT_SHORT_NO_FOUND, True)
-                            print ''
-                            print '  Updated...  Items Left: ' + str(itemsLeft)
+                            print('')
+                            print('  Updated...  Items Left: ' + str(itemsLeft))
                             
                 elif len(res) == 0:
-                    print '  No item found...'
+                    print('  No item found...')
                 else:
                     printItems(res, 10, PRINT_SHORT_NO_FOUND)
                     if len(res) > 10:
-                        print '    ...'
-                    print ''
-                    print '  Narrow search...'
+                        print('    ...')
+                    print('')
+                    print('  Narrow search...')
             else:
-                print '  Not enough arguments, missing item name...'
+                print('  Not enough arguments, missing item name...')
                 
         elif cmd == 'uf' or cmd == 'unmarkfind':
         
@@ -625,12 +625,12 @@ def process(cmdStr):
                     item = res[0]
                     eth = item[ETH]
                     if eth == ETH_ETH_ONLY:
-                        print '  Cannot unmark non-eth item for eth only item...'
+                        print('  Cannot unmark non-eth item for eth only item...')
                     else:
                         if not item[FOUND]:
                             printItem(item, PRINT_SHORT_NO_FOUND)
-                            print ''
-                            print '  Already marked as NOT found...'
+                            print('')
+                            print('  Already marked as NOT found...')
 
                         else:
                             # add item ct if we havent already found eth version
@@ -638,19 +638,19 @@ def process(cmdStr):
                                 itemsLeft += 1
                             item[FOUND] = False
                             printItem(item, PRINT_SHORT_NO_FOUND)
-                            print ''
-                            print '  Updated...  Items Left: ' + str(itemsLeft)
+                            print('')
+                            print('  Updated...  Items Left: ' + str(itemsLeft))
                 elif len(res) == 0:
-                    print '  No item found...'
+                    print('  No item found...')
                 else:
                     printItems(res, 10, PRINT_SHORT_NO_FOUND)
                     if len(res) > 10:
-                        print '    ...'
-                    print ''
-                    print '  Narrow search...'
+                        print('    ...')
+                    print('')
+                    print('  Narrow search...')
                     
             else:
-                print '  Not enough arguments, missing item name...'
+                print('  Not enough arguments, missing item name...')
                 
         elif cmd == 'ufe' or cmd == 'unmarkfindeth':
         
@@ -662,12 +662,12 @@ def process(cmdStr):
                     item = res[0]
                     eth = item[ETH]
                     if eth == ETH_NORMAL_ONLY:
-                        print '  Cannot unmark eth item for non-eth only item...'
+                        print('  Cannot unmark eth item for non-eth only item...')
                     else:
                         if not item[FOUND_ETH]:
                             printItem(item, PRINT_SHORT_NO_FOUND, True)
-                            print ''
-                            print '  Already marked as NOT found...'
+                            print('')
+                            print('  Already marked as NOT found...')
                             
                         else:
                             # add item ct if we havent already found non-eth version
@@ -675,19 +675,19 @@ def process(cmdStr):
                                 itemsLeft += 1
                             item[FOUND_ETH] = False
                             printItem(item, PRINT_SHORT_NO_FOUND, True)
-                            print ''
-                            print '  Updated...  Items Left: ' + str(itemsLeft)
+                            print('')
+                            print('  Updated...  Items Left: ' + str(itemsLeft))
                             
                 elif len(res) == 0:
-                    print '  No item found...'
+                    print('  No item found...')
                 else:
                     printItems(res, 10, PRINT_SHORT_NO_FOUND)
                     if len(res) > 10:
-                        print '    ...'
-                    print ''
-                    print '  Narrow search...'
+                        print('    ...')
+                    print('')
+                    print('  Narrow search...')
             else:
-                print '  Not enough arguments, missing item name...'
+                print('  Not enough arguments, missing item name...')
                 
         elif cmd == 'c' or cmd == 'comment':
         
@@ -703,39 +703,39 @@ def process(cmdStr):
                     if comment != '':
                         item[COMMENT] = comment
                         printItem(item)
-                        print ''
-                        print '  Updated...'
+                        print('')
+                        print('  Updated...')
                     else:
-                        print '  No comment to update...'
+                        print('  No comment to update...')
                 elif len(res) == 0:
-                    print '  No item found...'
+                    print('  No item found...')
                 else:
                     printItems(res, 10, PRINT_SHORT_NO_FOUND)
                     if len(res) > 10:
-                        print '    ...'
-                    print ''
-                    print '  Narrow search...'
+                        print('    ...')
+                    print('')
+                    print('  Narrow search...')
             else:
-                print '  Not enough arguments, missing item name...'
+                print('  Not enough arguments, missing item name...')
                 
         else:
         
-            print '  Unhandled command... (h = help, q = quit)'
+            print('  Unhandled command... (h = help, q = quit)')
             
     writefile()
     
-    print ''
+    print('')
     return rv
     
 d = readfile()
 result = True
 
-print ''
-print 'Holy Grail Tracking Program'
-print ''
-print '  Items Left:       ' + str(itemsLeft)
-print ''
+print('')
+print('Holy Grail Tracking Program')
+print('')
+print('  Items Left:       ' + str(itemsLeft))
+print('')
 
 while result:
-    cmd = raw_input('>>>  ')
+    cmd = input('>>>  ')
     result = process(cmd)
